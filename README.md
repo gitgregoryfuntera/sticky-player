@@ -4,11 +4,10 @@
 ![myfile](https://im6.ezgif.com/tmp/ezgif-6-90e2179569.webp)
 ***
 ### Download and Install
-**Click [here](https://github.com/gitgregoryfuntera/sticky-player/releases/download/0.0.1/Sticky.Player.Setup.0.0.1.exe) to download and install application**
-***
+**Click [here](https://github.com/gitgregoryfuntera/sticky-player/releases/download/0.0.1/Sticky.Player.Setup.0.0.1.exe) to download and install application**\
 ***Download and install at your own risk. Project is still in alpha stage***
 ***
-##### [Release Notes](https://github.com/gitgregoryfuntera/sticky-player/releases)
+### [Release Notes](https://github.com/gitgregoryfuntera/sticky-player/releases)
 
 ### TODO
 - [ ] Release to Microsoft Store
