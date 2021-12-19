@@ -1,4 +1,23 @@
-## Starting Development
+# Sticky Player
+##### _- Play your application on top of other active application_
+***
+### Preview
+![myfile](https://i.imgur.com/Sbp5C86.gif[/img])
+***
+### Download and Install
+**Click [here](https://github.com/gitgregoryfuntera/sticky-player/releases/download/0.0.1/Sticky.Player.Setup.0.0.1.exe) to download and install application**
+***Download and install at your own risk. Project is still in alpha stage***
+***
+##### [Release Notes](https://github.com/gitgregoryfuntera/sticky-player/releases)
+
+### TODO
+- [ ] Release to Microsoft Store
+- [ ] Add profile settings for user
+    - [ ] User able to add other web views other than youtube
+    - [ ] Resizable window feature
+    - [ ] Adjust window opacity feature
+
+## Development
 
 ```bash
 npm install
