@@ -232,7 +232,33 @@ export default class MenuBuilder {
                   },
                 },
               ]
-            : [],
+            : [
+                {
+                  label: '&Reload',
+                  accelerator: 'Ctrl+R',
+                  click: () => {
+                    this.mainWindow.webContents.reload();
+                  },
+                },
+                {
+                  label: 'Lock position',
+                  click: () => {
+                    this.mainWindow.setMovable(false);
+                  },
+                },
+                {
+                  label: 'Unlock position',
+                  click: () => {
+                    this.mainWindow.setMovable(true);
+                  },
+                },
+                {
+                  label: 'Exit',
+                  click: () => {
+                    this.mainWindow.close();
+                  },
+                },
+              ],
       },
     ];
 
