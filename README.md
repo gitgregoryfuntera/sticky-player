@@ -1,7 +1,7 @@
 # Sticky Player
 ##### _- Play your application on top of other active application_
 ### Preview
-![myfile](https://i.imgur.com/Sbp5C86.gif)
+![myfile](https://im6.ezgif.com/tmp/ezgif-6-90e2179569.webp)
 ***
 ### Download and Install
 **Click [here](https://github.com/gitgregoryfuntera/sticky-player/releases/download/0.0.1/Sticky.Player.Setup.0.0.1.exe) to download and install application**
