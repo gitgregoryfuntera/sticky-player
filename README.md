@@ -5,6 +5,7 @@
 ***
 ### Download and Install
 **Click [here](https://github.com/gitgregoryfuntera/sticky-player/releases/download/0.0.1/Sticky.Player.Setup.0.0.1.exe) to download and install application**
+***
 ***Download and install at your own risk. Project is still in alpha stage***
 ***
 ##### [Release Notes](https://github.com/gitgregoryfuntera/sticky-player/releases)
