@@ -1,5 +1,5 @@
 {
-  "name": "sticky-player",
+  "name": "stickyplayer",
   "description": "Electron application boilerplate based on React, React Router, Webpack, React Fast Refresh for rapid application development",
   "scripts": {
     "build": "concurrently \"npm run build:main\" \"npm run build:renderer\"",
@@ -30,8 +30,8 @@
     ]
   },
   "build": {
-    "productName": "Sticky Player",
-    "appId": "com.in-house-project.sticky-player",
+    "productName": "StickyPlayer",
+    "appId": "com.in-house-project.stickyplayer",
     "asar": true,
     "asarUnpack": "**\\*.{node,dll}",
     "files": [
@@ -188,6 +188,7 @@
     "electron-builder": "^22.13.1",
     "electron-devtools-installer": "^3.2.0",
     "electron-notarize": "^1.1.1",
+    "electron-packager": "^15.4.0",
     "electron-rebuild": "^3.2.3",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",

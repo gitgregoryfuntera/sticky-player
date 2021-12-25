@@ -1,7 +1,7 @@
 {
-  "name": "sticky-player",
-  "version": "0.0.1",
-  "description": "Application that overlays on top of other active applications.",
+  "name": "stickyplayer",
+  "version": "1.0.0",
+  "description": "Application that overlays on top of other active applications",
   "main": "./dist/main/main.js",
   "author": {
     "name": "John Gregory Funtera",
