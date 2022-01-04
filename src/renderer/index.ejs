@@ -6,13 +6,21 @@
   </head>
   <body>
     <div id="root"></div>
+    <div id="portal"></div>
   </body>
   <script>
-    window.electron.ipcRenderer.once('ipc-example', (arg) => {
+    window.electron.ipcRenderer.on('ipc-example', (arg) => {
       // eslint-disable-next-line no-console
       console.log(arg);
     });
 
     window.electron.ipcRenderer.myPing();
+
+    window.electron.ipcRenderer.on('ipc-add-webview', (arg) => {
+      // eslint-disable-next-line no-console
+      console.log(arg);
+    });
+
+    window.electron.ipcRenderer.ipcAddWebView();
   </script>
 </html>

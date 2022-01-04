@@ -130,13 +130,13 @@ export default class MenuBuilder {
       label: 'Settings',
       submenu: [
         {
-          label: 'Lock position',
+          label: 'Lock Position',
           click: () => {
             this.mainWindow.setMovable(false);
           },
         },
         {
-          label: 'Unlock position',
+          label: 'Unlock Position',
           click: () => {
             this.mainWindow.setMovable(true);
           },
@@ -220,15 +220,21 @@ export default class MenuBuilder {
                   },
                 },
                 {
-                  label: 'Lock position',
+                  label: 'Lock Position',
                   click: () => {
                     this.mainWindow.setMovable(false);
                   },
                 },
                 {
-                  label: 'Unlock position',
+                  label: 'Unlock Position',
                   click: () => {
                     this.mainWindow.setMovable(true);
+                  },
+                },
+                {
+                  label: 'Change Current URL',
+                  click: () => {
+                    this.mainWindow.webContents.send('ipc-add-webview', 'change web view');
                   },
                 },
               ]
@@ -241,13 +247,13 @@ export default class MenuBuilder {
                   },
                 },
                 {
-                  label: 'Lock position',
+                  label: 'Lock Position',
                   click: () => {
                     this.mainWindow.setMovable(false);
                   },
                 },
                 {
-                  label: 'Unlock position',
+                  label: 'Unlock Position',
                   click: () => {
                     this.mainWindow.setMovable(true);
                   },

@@ -28,7 +28,7 @@ export default class AppUpdater {
 let mainWindow: BrowserWindow | null = null;
 
 ipcMain.on('ipc-example', async (event, arg) => {
-  console.log('ipc-example',event);
+  console.log('ipc-example','pong');
 });
 
 if (process.env.NODE_ENV === 'production') {

@@ -1,5 +1,8 @@
 {
   "compilerOptions": {
+    "typeRoots": [
+      "./declarations/global.d.ts"
+    ],
     "target": "es2021",
     "module": "commonjs",
     "lib": ["dom", "esnext"],
