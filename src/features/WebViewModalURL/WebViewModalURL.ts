@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createSlice } from '@reduxjs/toolkit';
 
 export const WebViewModalURL = createSlice({
   name: 'WebViewModalURL',
@@ -10,9 +10,9 @@ export const WebViewModalURL = createSlice({
       state.value = action.payload;
     },
   },
-})
+});
 
 // Action creators are generated for each case reducer function
-export const { modifyURL } = WebViewModalURL.actions
+export const { modifyURL } = WebViewModalURL.actions;
 
-export default WebViewModalURL.reducer
+export default WebViewModalURL.reducer;

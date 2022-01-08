@@ -1,16 +1,33 @@
 .add-webview-modal-container {
-    background-color: rgba(0,0,0,0.5);
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    .webview-modal {
-      height: 150px;
-      width: 470px;
-      background-color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .webview-modal {
+    height: 300px;
+    width: 470px;
+    background-color: #fff;
+    .modal-title {
+      margin: 1rem;
     }
+
+    .input-container {
+      margin: 1rem;
+      .webview-url-input {
+        width: 100%;
+        padding: 1rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
 }

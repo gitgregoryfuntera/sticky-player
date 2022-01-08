@@ -1,6 +1,6 @@
 import AddWebViewModal from 'modals/AddWebView';
 import { useEffect, useState } from 'react';
-import './index.styles.css';
+import './index.styles.scss';
 
 const WebView = () => {
   const [webView, setWebView] = useState('https://www.youtube.com/');
