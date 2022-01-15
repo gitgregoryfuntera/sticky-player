@@ -1,4 +1,5 @@
 import CustomButton from 'components/CustomButton';
+import WebViewHistory from 'components/WebViewHistory';
 import { useEffect, useState } from 'react';
 import ReactDom from 'react-dom/';
 import './index.styles.scss';
@@ -44,6 +45,16 @@ const AddWebViewModal = ({
               value={`${webViewURL}`}
               placeholder="https://"
               onChange={handleOnChange}
+            />
+          </div>
+          <div className="webview-history-container">
+            <WebViewHistory
+              links={[
+                {
+                  link: 'https://www3.gogoanime.cm/',
+                },
+              ]}
+              handleOnGoTo={handleModalConfirm}
             />
           </div>
           <div className="buttons">
