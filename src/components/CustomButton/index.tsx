@@ -3,17 +3,17 @@ import './index.styles.scss';
 
 type CustomButtonBaseProps = {
   label: string;
-  type?: string;
+  category?: string;
 };
 
 type CustomButtonOtherProps = React.HTMLAttributes<HTMLButtonElement>;
 
 type CustomButtonProps = CustomButtonBaseProps & CustomButtonOtherProps;
 
-const CustomButton = ({ label, type, ...rest }: CustomButtonProps) => {
+const CustomButton = ({ label, category, ...rest }: CustomButtonProps) => {
   return (
     <div className="button-container">
-      <button className={`button ${type}`} {...rest}>
+      <button className={`button ${category}`} {...rest}>
         {label}
       </button>
     </div>

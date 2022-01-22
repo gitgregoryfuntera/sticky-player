@@ -1,19 +1,22 @@
 import CustomButton from 'components/CustomButton';
 import WebViewHistory from 'components/WebViewHistory';
+import { Links } from 'components/WebViewHistory/interfaces';
 import { useEffect, useState } from 'react';
 import ReactDom from 'react-dom/';
 import './index.styles.scss';
 
 type AddWebViewModalProps = {
-  isModalOpen: boolean;
+  showModal: boolean;
   handleIsModalOpen: () => void;
-  handleModalConfirm: (webviewURL: string) => void;
+  handleModalConfirm: (webviewURL: string, e: any) => void;
+  webViewURLHistory: Links[];
 };
 
 const AddWebViewModal = ({
-  isModalOpen,
+  showModal: isModalOpen,
   handleIsModalOpen,
   handleModalConfirm,
+  webViewURLHistory,
 }: AddWebViewModalProps) => {
   const [webViewURL, setWebViewUrl] = useState('');
 
@@ -36,36 +39,31 @@ const AddWebViewModal = ({
     <>
       <div className="add-webview-modal-container">
         <div className="webview-modal">
-          <h1 className="modal-title">Enter URL</h1>
-          <div className="input-container">
-            <input
-              className="webview-url-input"
-              name="webview-url"
-              type="text"
-              value={`${webViewURL}`}
-              placeholder="https://"
-              onChange={handleOnChange}
-            />
+          <div className="header-buttons">
+            <CustomButton category="danger" label="X" onClick={handleIsModalOpen} />
           </div>
+          <h1 className="modal-title">Enter URL</h1>
+          <form  onSubmit={(e) => handleModalConfirm(webViewURL,e)}>
+            <div className="input-container">
+              <input
+                className="webview-url-input"
+                name="webview-url"
+                type="text"
+                value={`${webViewURL}`}
+                placeholder="https://"
+                onChange={handleOnChange}
+              />
+              <CustomButton
+                label="CONFIRM"
+                category="submit"
+              />
+            </div>
+          </form>
+
           <div className="webview-history-container">
             <WebViewHistory
-              links={[
-                {
-                  link: 'https://www3.gogoanime.cm/',
-                },
-              ]}
+              links={webViewURLHistory}
               handleOnGoTo={handleModalConfirm}
-            />
-          </div>
-          <div className="buttons">
-            <CustomButton
-              type="danger"
-              label="Close"
-              onClick={handleIsModalOpen}
-            />
-            <CustomButton
-              label="Confirm"
-              onClick={() => handleModalConfirm(webViewURL)}
             />
           </div>
         </div>

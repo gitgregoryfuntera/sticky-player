@@ -1,5 +1,11 @@
-.webview-list {
+.container {
+  padding-inline: 1rem;
+  .webview-list {
+    min-height: 140px;
+    max-height: 160px;
+    overflow: auto;
     .webview-visited-item {
-        display: flex; 
+      display: flex;
     }
+  }
 }

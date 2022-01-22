@@ -9,25 +9,25 @@
   align-items: center;
   justify-content: center;
   .webview-modal {
-    height: 300px;
-    width: 470px;
+    height: 430px;
+    width: 460px;
     background-color: #fff;
+    .header-buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+    }
     .modal-title {
       margin: 1rem;
     }
 
     .input-container {
       margin: 1rem;
+      display: flex;
       .webview-url-input {
         width: 100%;
         padding: 1rem;
       }
-    }
-
-    .buttons {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
     }
   }
 }
