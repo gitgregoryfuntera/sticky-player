@@ -1,7 +1,7 @@
 
 import WebView from 'components/WebView';
 import { MemoryRouter as Router, Switch, Route } from 'react-router-dom';
-import './App.css';
+import './App.scss';
 
 
 export default function App() {

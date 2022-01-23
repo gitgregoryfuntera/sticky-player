@@ -7,8 +7,9 @@ const WebView = () => {
   const [webViewURLHistory, setWebViewURLHistory] = useState([
     {
       link: 'https://www.youtube.com',
+      visitedAt: `${new Date().toLocaleDateString()} @ ${new Date().toLocaleTimeString()}`,
     },
-  ])
+  ]);
   const [showModal, setShowModal] = useState(false);
 
   const handleIsModalOpen = () => {
@@ -20,10 +21,16 @@ const WebView = () => {
     try {
       const url = new URL(webviewURL);
       setWebView(url.origin);
-      setWebViewURLHistory((prevState) => [{link: url.origin}, ...prevState]);
+      setWebViewURLHistory((prevState) => [
+        {
+          link: url.origin,
+          visitedAt: `${new Date().toLocaleDateString()} @ ${new Date().toLocaleTimeString()}`,
+        },
+        ...prevState,
+      ]);
       setShowModal(false);
-    } catch(e: any) {
-      console.log(e.message,'invalid url');
+    } catch (e: any) {
+      console.log(e.message, 'invalid url');
     }
   };
 

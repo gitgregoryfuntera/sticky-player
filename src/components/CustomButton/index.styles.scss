@@ -1,14 +1,29 @@
+@import '../../style-variables/Colors.scss';
+
 .button-container {
   .button {
     padding: 1rem;
-    background: blue;
-    color: white;
+    background: $primary;
+    color: $white;
     width: 100%;
+    border: none;
+    border-left: 5px solid $black;
+    border-bottom: 4px solid $black;
     &.danger {
-      background: red;
+      background: $danger;
+    }
+    &.alert {
+      background: $alert;
     }
   }
+
   :hover {
     cursor: pointer;
+    color: $black;
+    background: $white !important;
+    border-left: 5px solid gray;
+    border-bottom: 4px solid gray;
+    border-right: 1px solid gray;
+    border-top: 1px solid gray;
   }
 }

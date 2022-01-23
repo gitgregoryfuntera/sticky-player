@@ -14,13 +14,15 @@ const WebViewHistory = ({ links = [], handleOnGoTo }: WebViewHistoryProps) => {
   if (length) {
     content = (
       <>
-        {links.map(({ link }) => (
+        {links.map(({ link, visitedAt }) => (
           <li className="webview-visited-item" key={uuidv4()}>
-            <div>
+            <div className="visited-item-button-container">
               <CustomButton label="GO" onClick={(e) => handleOnGoTo(link, e)} />
             </div>
-            <div>
+            <div className="visited-item-text-container">
               <span>{link}</span>
+              <br/>
+              <span>{visitedAt}</span>
             </div>
           </li>
         ))}
@@ -29,7 +31,7 @@ const WebViewHistory = ({ links = [], handleOnGoTo }: WebViewHistoryProps) => {
   }
   return (
     <div className="container">
-       <h4>Visited Links</h4>
+       <h4 className="container-title">Visited Links</h4>
       <ul className="webview-list">{content}</ul>
     </div>
   );
