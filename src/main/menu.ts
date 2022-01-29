@@ -234,7 +234,10 @@ export default class MenuBuilder {
                 {
                   label: 'Change Current URL',
                   click: () => {
-                    this.mainWindow.webContents.send('ipc-add-webview', 'change web view');
+                    this.mainWindow.webContents.send(
+                      'ipc-add-webview',
+                      'change web view'
+                    );
                   },
                 },
               ]
@@ -256,6 +259,15 @@ export default class MenuBuilder {
                   label: 'Unlock Position',
                   click: () => {
                     this.mainWindow.setMovable(true);
+                  },
+                },
+                {
+                  label: 'Change Current URL',
+                  click: () => {
+                    this.mainWindow.webContents.send(
+                      'ipc-add-webview',
+                      'change web view'
+                    );
                   },
                 },
                 {

@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
     "typeRoots": [
-      "./declarations/global.d.ts"
+      "./node_modules/@types",
+      "./declarations/global.d.ts",
     ],
     "target": "es2021",
     "module": "commonjs",
