@@ -1,3 +1,4 @@
+import CustomAlert from 'components/CustomAlert';
 import CustomButton from 'components/CustomButton';
 import WebViewHistory from 'components/WebViewHistory';
 import { Links } from 'components/WebViewHistory/interfaces';
@@ -35,15 +36,22 @@ const AddWebViewModal = ({
 
   if (!isModalOpen) return null;
 
+  const handleClose = () => {
+    console.log('clicked');
+  };
   return ReactDom.createPortal(
     <>
       <div className="add-webview-modal-container">
         <div className="webview-modal">
           <div className="header-buttons">
-            <CustomButton category="danger" label="X" onClick={handleIsModalOpen} />
+            <CustomButton
+              category="danger"
+              label="X"
+              onClick={handleIsModalOpen}
+            />
           </div>
           <h1 className="modal-title">Enter URL</h1>
-          <form  onSubmit={(e) => handleModalConfirm(webViewURL,e)}>
+          <form onSubmit={(e) => handleModalConfirm(webViewURL, e)}>
             <div className="input-container">
               <input
                 className="webview-url-input"
@@ -53,11 +61,14 @@ const AddWebViewModal = ({
                 placeholder="https://"
                 onChange={handleOnChange}
               />
-              <CustomButton
-                label="CONFIRM"
-                category="submit"
-              />
+              <CustomButton label="CONFIRM" category="submit" />
             </div>
+            <CustomAlert
+              message="hello"
+              category="danger"
+              show={true}
+              handleClose={handleClose}
+            />
           </form>
 
           <div className="webview-history-container">
