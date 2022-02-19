@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import WebViewModalURL from 'features/WebViewModalURL/WebViewModalURL';
+import { customAlertSlice } from 'features/custom-alert-slice/custom-alert.slice';
 
 export const store = configureStore({
   reducer: {
-    WebViewModalURL: WebViewModalURL,
+    customAlertSlice: customAlertSlice.reducer,
   },
 });
 

@@ -1,9 +1,12 @@
+import { onToggleCustomAlert } from 'features/custom-alert-slice/custom-alert.slice';
 import AddWebViewModal from 'modals/AddWebView';
 import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
 import './index.styles.scss';
 
 const WebView = () => {
   const [webView, setWebView] = useState('https://www.youtube.com/');
+  const dispatch = useDispatch();
   const [webViewURLHistory, setWebViewURLHistory] = useState([
     {
       link: 'https://www.youtube.com',
@@ -31,6 +34,12 @@ const WebView = () => {
       setShowModal(false);
     } catch (e: any) {
       console.log(e.message, 'invalid url');
+      dispatch(
+        onToggleCustomAlert({
+          message: 'Invalid URL',
+          show: true,
+        })
+      );
     }
   };
 
