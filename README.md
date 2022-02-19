@@ -8,18 +8,13 @@
 
 ---
 
-### Download and Install
-
-**Click [here](https://github.com/gitgregoryfuntera/sticky-player/releases/download/0.0.1/Sticky.Player.Setup.0.0.1.exe) to download and install application**\
-**_Download and install at your own risk. Project is still in alpha stage_**
-
----
-
-### [Release Notes](https://github.com/gitgregoryfuntera/sticky-player/releases)
+### [Microsoft Store Link](https://www.microsoft.com/en-us/p/sticky-player/9n8kkrrv198q?cid=msft_web_chart&activetab=pivot:overviewtab)
 
 ### TODO
 
-- [ ] Release to Microsoft Store
+- [x] Release to Microsoft Store
+- [ ] Fix file structure
+- [ ] Fix lint-staged issue
 - [ ] Add profile settings for user
   - [x] User able to add other web views other than youtube
   - [ ] Resizable window feature
