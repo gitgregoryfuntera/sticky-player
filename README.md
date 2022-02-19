@@ -14,6 +14,7 @@
 
 - [x] Release to Microsoft Store
 - [ ] Fix file structure
+- [ ] Fix lint-staged issue
 - [ ] Add profile settings for user
   - [x] User able to add other web views other than youtube
   - [ ] Resizable window feature
