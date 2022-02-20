@@ -1,7 +1,7 @@
 /**
  * Build config for electron renderer process
  */
-
+/* eslint-disable */
 import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';

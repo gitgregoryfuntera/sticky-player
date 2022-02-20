@@ -3,6 +3,7 @@ import AddWebViewModal from 'modals/add-webview-modal/add-webview-modal.componen
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import './webview.styles.scss';
+import { ErrorMessages } from 'enums';
 
 const WebView = () => {
   const [webView, setWebView] = useState('https://www.youtube.com/');
@@ -34,9 +35,13 @@ const WebView = () => {
       setShowModal(false);
     } catch (e: any) {
       console.log(e.message, 'invalid url');
+      let message = e.message;
+      if (e.message === `Failed to construct 'URL': Invalid URL`) {
+        message = `${ErrorMessages.ERROR_MESSAGE_CODE_1_KEY}: ${ErrorMessages.ERROR_MESSAGE_CODE_1}`;
+      }
       dispatch(
         onToggleCustomAlert({
-          message: 'Invalid URL',
+          message,
           show: true,
         })
       );
