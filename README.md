@@ -13,7 +13,8 @@
 ### TODO
 
 - [x] Release to Microsoft Store
-- [ ] Fix file structure
+- [x] Fix file structure
+- [ ] Fix google pop up sign-in in other sites
 - [ ] Fix lint-staged issue
 - [ ] Add profile settings for user
   - [x] User able to add other web views other than youtube
