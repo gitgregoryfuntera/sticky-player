@@ -1,13 +1,13 @@
-import CustomAlert from 'components/CustomAlert';
-import CustomButton from 'components/CustomButton';
-import WebViewHistory from 'components/WebViewHistory';
-import { Links } from 'components/WebViewHistory/interfaces';
-import { onToggleCustomAlert } from 'features/custom-alert-slice/custom-alert.slice';
+import CustomAlert from 'components/custom-alert/custom-alert.component';
+import CustomButton from 'components/custom-button/custom-button.component';
+import WebViewHistory from 'components/webview-history/webview-history.component';
+import { Links } from 'components/webview-history/interfaces';
+import { onToggleCustomAlert } from 'reducers/custom-alert-reducer/custom-alert.reducer';
 import { useEffect, useState } from 'react';
 import ReactDom from 'react-dom/';
 import { useAppDispatch, useAppSelector } from 'renderer/hooks';
 
-import './index.styles.scss';
+import './add-webview-modal.styles.scss';
 
 type AddWebViewModalProps = {
   showModal: boolean;
@@ -24,10 +24,10 @@ const AddWebViewModal = ({
 }: AddWebViewModalProps) => {
   const [webViewURL, setWebViewUrl] = useState('');
   const showCustomAlert = useAppSelector(
-    (state) => state.customAlertSlice.show
+    (state) => state.customAlert.show
   );
   const messageCustomAlert = useAppSelector(
-    (state) => state.customAlertSlice.message
+    (state) => state.customAlert.message
   );
   const dispatch = useAppDispatch();
 
@@ -46,9 +46,6 @@ const AddWebViewModal = ({
 
   if (!isModalOpen) return null;
 
-  const handleClose = () => {
-    console.log('clicked');
-  };
   return ReactDom.createPortal(
     <>
       <div className="add-webview-modal-container">

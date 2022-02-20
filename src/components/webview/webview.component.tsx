@@ -1,8 +1,8 @@
-import { onToggleCustomAlert } from 'features/custom-alert-slice/custom-alert.slice';
-import AddWebViewModal from 'modals/AddWebView';
+import { onToggleCustomAlert } from 'reducers/custom-alert-reducer/custom-alert.reducer';
+import AddWebViewModal from 'modals/add-webview-modal/add-webview-modal.component';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
-import './index.styles.scss';
+import './webview.styles.scss';
 
 const WebView = () => {
   const [webView, setWebView] = useState('https://www.youtube.com/');

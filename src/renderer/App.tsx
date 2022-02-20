@@ -1,4 +1,4 @@
-import WebView from 'components/WebView';
+import WebView from 'components/webview/webview.component';
 import { MemoryRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
 

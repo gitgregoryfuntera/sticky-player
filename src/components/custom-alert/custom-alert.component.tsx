@@ -1,4 +1,4 @@
-import './index.styles.scss';
+import './custom-alert.styles.scss';
 
 type CustomAlertProps = {
   message: string;

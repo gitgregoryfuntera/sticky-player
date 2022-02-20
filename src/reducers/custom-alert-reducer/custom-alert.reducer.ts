@@ -9,8 +9,8 @@ const initialState: CustomAlertToggleState = {
   show: false,
 };
 
-export const customAlertSlice = createSlice({
-  name: 'customAlertSlice',
+export const customAlert = createSlice({
+  name: 'customAlert',
   initialState,
   reducers: {
     onToggleCustomAlert: (state, action: PayloadAction<CustomAlertToggleState>) => {
@@ -22,6 +22,6 @@ export const customAlertSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { onToggleCustomAlert } = customAlertSlice.actions;
+export const { onToggleCustomAlert } = customAlert.actions;
 
-export default customAlertSlice;
+export default customAlert;

@@ -1,6 +1,6 @@
-import CustomButton from 'components/CustomButton';
+import CustomButton from 'components/custom-button/custom-button.component';
 import { Links } from './interfaces';
-import './index.styles.scss';
+import './webview-history.styles.scss';
 import { v4 as uuidv4 } from 'uuid';
 
 type WebViewHistoryProps = {

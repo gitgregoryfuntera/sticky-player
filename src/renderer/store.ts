@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { customAlertSlice } from 'features/custom-alert-slice/custom-alert.slice';
+import { customAlert } from 'reducers/custom-alert-reducer/custom-alert.reducer';
 
 export const store = configureStore({
   reducer: {
-    customAlertSlice: customAlertSlice.reducer,
+    customAlert: customAlert.reducer,
   },
 });
 
